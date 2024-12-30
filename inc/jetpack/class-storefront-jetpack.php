@@ -101,14 +101,14 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		 * @since  1.6.1
 		 */
 		public function jetpack_scripts() {
-			global $storefront_version;
+			global $theme_version;
 
 			if ( wp_style_is( 'the-neverending-homepage', 'enqueued' ) ) {
-				wp_enqueue_style( 'storefront-jetpack-infinite-scroll', get_template_directory_uri() . '/assets/css/jetpack/infinite-scroll.css', array( 'the-neverending-homepage' ), $storefront_version );
+				wp_enqueue_style( 'storefront-jetpack-infinite-scroll', get_template_directory_uri() . '/assets/css/jetpack/infinite-scroll.css', array( 'the-neverending-homepage' ), $theme_version );
 				wp_style_add_data( 'storefront-jetpack-infinite-scroll', 'rtl', 'replace' );
 			}
 
-			wp_enqueue_style( 'storefront-jetpack-widgets', get_template_directory_uri() . '/assets/css/jetpack/widgets.css', array(), $storefront_version );
+			wp_enqueue_style( 'storefront-jetpack-widgets', get_template_directory_uri() . '/assets/css/jetpack/widgets.css', array(), $theme_version );
 			wp_style_add_data( 'storefront-jetpack-widgets', 'rtl', 'replace' );
 		}
 	}

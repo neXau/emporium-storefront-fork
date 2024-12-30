@@ -34,10 +34,10 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 		 * @since  1.4.4
 		 */
 		public function welcome_style( $hook_suffix ) {
-			global $storefront_version;
+			global $theme_version;
 
 			if ( 'appearance_page_storefront-welcome' === $hook_suffix ) {
-				wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/assets/css/admin/welcome-screen/welcome.css', array(), $storefront_version );
+				wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/assets/css/admin/welcome-screen/welcome.css', array(), $theme_version );
 				wp_style_add_data( 'storefront-welcome-screen', 'rtl', 'replace' );
 			}
 		}
@@ -62,14 +62,14 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 			require_once ABSPATH . 'wp-admin/admin.php';
 			require_once ABSPATH . 'wp-admin/admin-header.php';
 
-			global $storefront_version;
+			global $theme_version;
 
 			$show_setup_screen = ( false === (bool) get_option( 'storefront_nux_dismissed' ) ) && ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '4.8.0', '>=' ) );
 			?>
 
 			<div class="storefront-wrap">
 				<section class="storefront-welcome-nav">
-					<span class="storefront-welcome-nav__version">Storefront <?php echo esc_attr( $storefront_version ); ?></span>
+					<span class="storefront-welcome-nav__version">Storefront <?php echo esc_attr( $theme_version ); ?></span>
 					<ul>
 						<li><a href="https://wordpress.org/support/theme/storefront" target="_blank"><?php esc_html_e( 'Support', 'storefront' ); ?></a></li>
 						<li><a href="https://woocommerce.com/documentation/themes/storefront/" target="_blank"><?php esc_html_e( 'Documentation', 'storefront' ); ?></a></li>

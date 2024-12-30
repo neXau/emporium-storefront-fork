@@ -65,7 +65,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 * @since 2.2.0
 		 */
 		public function enqueue_scripts() {
-			global $wp_customize, $storefront_version;
+			global $wp_customize, $theme_version;
 
 			if ( isset( $wp_customize ) || true === (bool) get_option( 'storefront_nux_dismissed' ) ) {
 				return;
@@ -73,10 +73,10 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 
 			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-			wp_enqueue_style( 'storefront-admin-nux', get_template_directory_uri() . '/assets/css/admin/admin.css', '', $storefront_version );
+			wp_enqueue_style( 'storefront-admin-nux', get_template_directory_uri() . '/assets/css/admin/admin.css', '', $theme_version );
 			wp_style_add_data( 'storefront-admin-nux', 'rtl', 'replace' );
 
-			wp_enqueue_script( 'storefront-admin-nux', get_template_directory_uri() . '/assets/js/admin/admin' . $suffix . '.js', array( 'jquery' ), $storefront_version, 'all' );
+			wp_enqueue_script( 'storefront-admin-nux', get_template_directory_uri() . '/assets/js/admin/admin' . $suffix . '.js', array( 'jquery' ), $theme_version, 'all' );
 
 			$storefront_nux = array(
 				'nonce' => wp_create_nonce( 'storefront_notice_dismiss' ),

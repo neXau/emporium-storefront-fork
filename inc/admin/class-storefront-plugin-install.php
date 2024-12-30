@@ -33,13 +33,13 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 		 * @since  1.4.4
 		 */
 		public function plugin_install_scripts( $hook_suffix ) {
-			global $storefront_version;
+			global $theme_version;
 
 			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-			wp_enqueue_script( 'storefront-plugin-install', get_template_directory_uri() . '/assets/js/admin/plugin-install' . $suffix . '.js', array( 'jquery', 'updates' ), $storefront_version, 'all' );
+			wp_enqueue_script( 'storefront-plugin-install', get_template_directory_uri() . '/assets/js/admin/plugin-install' . $suffix . '.js', array( 'jquery', 'updates' ), $theme_version, 'all' );
 
-			wp_enqueue_style( 'storefront-plugin-install', get_template_directory_uri() . '/assets/css/admin/plugin-install.css', array(), $storefront_version, 'all' );
+			wp_enqueue_style( 'storefront-plugin-install', get_template_directory_uri() . '/assets/css/admin/plugin-install.css', array(), $theme_version, 'all' );
 		}
 
 		/**

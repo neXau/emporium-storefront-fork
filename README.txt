@@ -736,7 +736,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 * Tweak - Escaping function used on homepage section titles.
 * Tweak - Remove all instances of `do_shortcode()` to improve performance.
 * Tweak - Reduced link focus outline from 2px to 1px.
-* Dev - `$storefront_version` global when using a child theme.
+* Dev - `$theme_version` global when using a child theme.
 
 = 1.4.5 - 2015-05-14 =
 * Fix - Use the correct escaping function in `storefront_product_categories()`.

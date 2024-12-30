@@ -9,7 +9,7 @@
  * Assign the Storefront version to a var
  */
 $theme              = wp_get_theme( 'storefront' );
-$storefront_version = $theme['Version'];
+$theme_version = $theme['Version'];
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -19,7 +19,7 @@ if ( ! isset( $content_width ) ) {
 }
 
 $storefront = (object) array(
-	'version'    => $storefront_version,
+	'version'    => $theme_version,
 
 	/**
 	 * Initialize all the things.

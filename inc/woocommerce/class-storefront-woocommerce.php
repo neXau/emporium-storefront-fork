@@ -152,20 +152,20 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since 1.0.0
 		 */
 		public function woocommerce_scripts() {
-			global $storefront_version;
+			global $theme_version;
 
 			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-			wp_enqueue_style( 'storefront-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce/woocommerce.css', array( 'storefront-style', 'storefront-icons' ), $storefront_version );
+			wp_enqueue_style( 'storefront-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce/woocommerce.css', array( 'storefront-style', 'storefront-icons' ), $theme_version );
 			wp_style_add_data( 'storefront-woocommerce-style', 'rtl', 'replace' );
 
-			wp_register_script( 'storefront-header-cart', get_template_directory_uri() . '/assets/js/woocommerce/header-cart' . $suffix . '.js', array(), $storefront_version, true );
+			wp_register_script( 'storefront-header-cart', get_template_directory_uri() . '/assets/js/woocommerce/header-cart' . $suffix . '.js', array(), $theme_version, true );
 			wp_enqueue_script( 'storefront-header-cart' );
 
-			wp_enqueue_script( 'storefront-handheld-footer-bar', get_template_directory_uri() . '/assets/js/footer' . $suffix . '.js', array(), $storefront_version, true );
+			wp_enqueue_script( 'storefront-handheld-footer-bar', get_template_directory_uri() . '/assets/js/footer' . $suffix . '.js', array(), $theme_version, true );
 
 			if ( ! class_exists( 'Storefront_Sticky_Add_to_Cart' ) && is_product() ) {
-				wp_register_script( 'storefront-sticky-add-to-cart', get_template_directory_uri() . '/assets/js/sticky-add-to-cart' . $suffix . '.js', array(), $storefront_version, true );
+				wp_register_script( 'storefront-sticky-add-to-cart', get_template_directory_uri() . '/assets/js/sticky-add-to-cart' . $suffix . '.js', array(), $theme_version, true );
 			}
 		}
 
@@ -234,7 +234,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @return void
 		 */
 		public function woocommerce_integrations_scripts() {
-			global $storefront_version;
+			global $theme_version;
 
 			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
@@ -242,7 +242,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * Bookings
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-bookings-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/bookings.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-bookings-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/bookings.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-bookings-style', 'rtl', 'replace' );
 			}
 
@@ -250,17 +250,17 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * Brands
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Brands' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-brands-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/brands.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-brands-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/brands.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-brands-style', 'rtl', 'replace' );
 
-				wp_enqueue_script( 'storefront-woocommerce-brands', get_template_directory_uri() . '/assets/js/woocommerce/extensions/brands' . $suffix . '.js', array(), $storefront_version, true );
+				wp_enqueue_script( 'storefront-woocommerce-brands', get_template_directory_uri() . '/assets/js/woocommerce/extensions/brands' . $suffix . '.js', array(), $theme_version, true );
 			}
 
 			/**
 			 * Wishlists
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Wishlists_Wishlist' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-wishlists-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/wishlists.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-wishlists-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/wishlists.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-wishlists-style', 'rtl', 'replace' );
 			}
 
@@ -268,7 +268,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * AJAX Layered Nav
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'SOD_Widget_Ajax_Layered_Nav' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-ajax-layered-nav-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/ajax-layered-nav.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-ajax-layered-nav-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/ajax-layered-nav.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-ajax-layered-nav-style', 'rtl', 'replace' );
 			}
 
@@ -276,7 +276,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * Variation Swatches
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_SwatchesPlugin' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-variation-swatches-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/variation-swatches.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-variation-swatches-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/variation-swatches.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-variation-swatches-style', 'rtl', 'replace' );
 			}
 
@@ -284,7 +284,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * Composite Products
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Composite_Products' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-composite-products-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/composite-products.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-composite-products-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/composite-products.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-composite-products-style', 'rtl', 'replace' );
 			}
 
@@ -292,7 +292,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Photography
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Photography' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-photography-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/photography.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-photography-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/photography.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-photography-style', 'rtl', 'replace' );
 			}
 
@@ -300,7 +300,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * Product Reviews Pro
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Product_Reviews_Pro' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-product-reviews-pro-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/product-reviews-pro.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-product-reviews-pro-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/product-reviews-pro.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-product-reviews-pro-style', 'rtl', 'replace' );
 			}
 
@@ -308,7 +308,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Smart Coupons
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Smart_Coupons' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-smart-coupons-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/smart-coupons.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-smart-coupons-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/smart-coupons.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-smart-coupons-style', 'rtl', 'replace' );
 			}
 
@@ -316,7 +316,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Deposits
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Deposits' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-deposits-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/deposits.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-deposits-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/deposits.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-deposits-style', 'rtl', 'replace' );
 			}
 
@@ -324,7 +324,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Product Bundles
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Bundles' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-bundles-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/bundles.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-bundles-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/bundles.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-bundles-style', 'rtl', 'replace' );
 			}
 
@@ -332,7 +332,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Multiple Shipping Addresses
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Ship_Multiple' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-sma-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/ship-multiple-addresses.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-sma-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/ship-multiple-addresses.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-sma-style', 'rtl', 'replace' );
 			}
 
@@ -340,7 +340,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Advanced Product Labels
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'Woocommerce_Advanced_Product_Labels' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-apl-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/advanced-product-labels.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-apl-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/advanced-product-labels.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-apl-style', 'rtl', 'replace' );
 			}
 
@@ -348,7 +348,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Mix and Match
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Mix_and_Match' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-mix-and-match-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/mix-and-match.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-mix-and-match-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/mix-and-match.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-mix-and-match-style', 'rtl', 'replace' );
 			}
 
@@ -356,7 +356,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Memberships
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Memberships' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-memberships-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/memberships.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-memberships-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/memberships.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-memberships-style', 'rtl', 'replace' );
 			}
 
@@ -364,7 +364,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Quick View
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Quick_View' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-quick-view-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/quick-view.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-quick-view-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/quick-view.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-quick-view-style', 'rtl', 'replace' );
 			}
 
@@ -379,7 +379,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Product Recommendations
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Product_Recommendations' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-product-recommendations-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/product-recommendations.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_enqueue_style( 'storefront-woocommerce-product-recommendations-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/product-recommendations.css', 'storefront-woocommerce-style', $theme_version );
 				wp_style_add_data( 'storefront-woocommerce-product-recommendations-style', 'rtl', 'replace' );
 			}
 		}
