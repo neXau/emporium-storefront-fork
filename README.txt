@@ -326,7 +326,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 * Tweak - Remove padding and transition styles from post navigation.
 * Fix - Remove hard coded colors for Blocks from `gutenberg-blocks.css` and use colors set in the Customizer instead.
 * Fix - Clear floats on alignwide and alignfull blocks.
-* Fix - When outputting custom styling for extensions, check if the object `$storefront` is in the expected format and has right properties.
+* Fix - When outputting custom styling for extensions, check if the object `$emporium` is in the expected format and has right properties.
 * Dev - Babel added as a dependency.
 * Dev - New `assets/js/src/editor.js` file.
 * Dev - Revert filter name. `storefront_woocommerce_customizer_css` reverted to `storefront_customizer_woocommerce_css`.
@@ -564,7 +564,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 = 2.1.1 - 2016-09-02 =
 * Fix - Changed some customizer settings transport from postMessage to refresh for live preview of changes.
 * Fix - Secondary navigation dropdown styling.
-* Dev - Restructured the way objects are initiated. Objects are now initiated into an accessible global $storefront for access to hooks. Kudos [@jtsternberg](https://github.com/jtsternberg).
+* Dev - Restructured the way objects are initiated. Objects are now initiated into an accessible global $emporium for access to hooks. Kudos [@jtsternberg](https://github.com/jtsternberg).
 
 = 2.1.0 - 2016-08-24 =
 * Feature - Lots of SEO enhancements. Kudos [@opportus](https://github.com/opportus).

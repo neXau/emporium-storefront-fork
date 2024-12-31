@@ -351,12 +351,12 @@ if ( ! class_exists( 'Storefront' ) ) :
 			wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/assets/js/navigation' . $suffix . '.js', array(), $theme_version, true );
 
 			if ( has_nav_menu( 'handheld' ) ) {
-				$storefront_l10n = array(
+				$emporium_l10n = array(
 					'expand'   => __( 'Expand child menu', 'storefront' ),
 					'collapse' => __( 'Collapse child menu', 'storefront' ),
 				);
 
-				wp_localize_script( 'storefront-navigation', 'storefrontScreenReaderText', $storefront_l10n );
+				wp_localize_script( 'storefront-navigation', 'storefrontScreenReaderText', $emporium_l10n );
 			}
 
 			if ( is_page_template( 'template-homepage.php' ) && has_post_thumbnail() ) {

@@ -78,11 +78,11 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 
 			wp_enqueue_script( 'storefront-admin-nux', get_template_directory_uri() . '/assets/js/admin/admin' . $suffix . '.js', array( 'jquery' ), $theme_version, 'all' );
 
-			$storefront_nux = array(
+			$emporium_nux = array(
 				'nonce' => wp_create_nonce( 'storefront_notice_dismiss' ),
 			);
 
-			wp_localize_script( 'storefront-admin-nux', 'storefrontNUX', $storefront_nux );
+			wp_localize_script( 'storefront-admin-nux', 'storefrontNUX', $emporium_nux );
 		}
 
 		/**

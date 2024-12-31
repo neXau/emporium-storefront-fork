@@ -8,17 +8,17 @@
 /**
  * Assign the Storefront version to a var
  */
-$theme              = wp_get_theme( 'storefront' );
+$theme              = wp_get_theme( 'emporium-storefront-fork' );
 $theme_version = $theme['Version'];
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 980; /* pixels */
-}
+// /**
+//  * Set the content width based on the theme's design and stylesheet.
+//  */
+// if ( ! isset( $content_width ) ) {
+// 	$content_width = 980; /* pixels */
+// }
 
-$storefront = (object) array(
+$emporium = (object) array(
 	'version'    => $theme_version,
 
 	/**
@@ -34,12 +34,12 @@ require 'inc/storefront-template-functions.php';
 require 'inc/wordpress-shims.php';
 
 if ( class_exists( 'Jetpack' ) ) {
-	$storefront->jetpack = require 'inc/jetpack/class-storefront-jetpack.php';
+	$emporium->jetpack = require 'inc/jetpack/class-storefront-jetpack.php';
 }
 
 if ( storefront_is_woocommerce_activated() ) {
-	$storefront->woocommerce            = require 'inc/woocommerce/class-storefront-woocommerce.php';
-	$storefront->woocommerce_customizer = require 'inc/woocommerce/class-storefront-woocommerce-customizer.php';
+	$emporium->woocommerce            = require 'inc/woocommerce/class-storefront-woocommerce.php';
+	$emporium->woocommerce_customizer = require 'inc/woocommerce/class-storefront-woocommerce-customizer.php';
 
 	require 'inc/woocommerce/class-storefront-woocommerce-adjacent-products.php';
 
@@ -49,7 +49,7 @@ if ( storefront_is_woocommerce_activated() ) {
 }
 
 if ( is_admin() ) {
-	$storefront->admin = require 'inc/admin/class-storefront-admin.php';
+	$emporium->admin = require 'inc/admin/class-storefront-admin.php';
 
 	require 'inc/admin/class-storefront-plugin-install.php';
 }

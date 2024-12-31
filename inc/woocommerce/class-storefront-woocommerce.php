@@ -391,31 +391,31 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @return array $styles the css
 		 */
 		public function get_woocommerce_extension_css() {
-			global $storefront;
+			global $emporium;
 
-			if ( ! is_object( $storefront ) ||
-				! property_exists( $storefront, 'customizer' ) ||
-				! is_a( $storefront->customizer, 'Storefront_Customizer' ) ||
-				! method_exists( $storefront->customizer, 'get_storefront_theme_mods' ) ) {
+			if ( ! is_object( $emporium ) ||
+				! property_exists( $emporium, 'customizer' ) ||
+				! is_a( $emporium->customizer, 'Storefront_Customizer' ) ||
+				! method_exists( $emporium->customizer, 'get_storefront_theme_mods' ) ) {
 				return apply_filters( 'storefront_customizer_woocommerce_extension_css', '' );
 			}
 
-			$storefront_theme_mods = $storefront->customizer->get_storefront_theme_mods();
+			$emporium_theme_mods = $emporium->customizer->get_storefront_theme_mods();
 
 			$woocommerce_extension_style = '';
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
 				$woocommerce_extension_style .= '
 				.wc-bookings-date-picker .ui-datepicker td.bookable a {
-					background-color: ' . $storefront_theme_mods['accent_color'] . ' !important;
+					background-color: ' . $emporium_theme_mods['accent_color'] . ' !important;
 				}
 
 				.wc-bookings-date-picker .ui-datepicker td.bookable a.ui-state-default {
-					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['accent_color'], -10 ) . ' !important;
+					background-color: ' . storefront_adjust_color_brightness( $emporium_theme_mods['accent_color'], -10 ) . ' !important;
 				}
 
 				.wc-bookings-date-picker .ui-datepicker td.bookable a.ui-state-active {
-					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['accent_color'], -50 ) . ' !important;
+					background-color: ' . storefront_adjust_color_brightness( $emporium_theme_mods['accent_color'], -50 ) . ' !important;
 				}
 				';
 			}
@@ -424,13 +424,13 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 				$woocommerce_extension_style .= '
 				.woocommerce #reviews .product-rating .product-rating-details table td.rating-graph .bar,
 				.woocommerce-page #reviews .product-rating .product-rating-details table td.rating-graph .bar {
-					background-color: ' . $storefront_theme_mods['text_color'] . ' !important;
+					background-color: ' . $emporium_theme_mods['text_color'] . ' !important;
 				}
 
 				.woocommerce #reviews .contribution-actions .feedback,
 				.woocommerce-page #reviews .contribution-actions .feedback,
 				.star-rating-selector:not(:checked) label.checkbox {
-					color: ' . $storefront_theme_mods['text_color'] . ';
+					color: ' . $emporium_theme_mods['text_color'] . ';
 				}
 
 				.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
@@ -442,24 +442,24 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 				.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
 				.woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before,
 				.woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before {
-					color: ' . $storefront_theme_mods['accent_color'] . ' !important;
+					color: ' . $emporium_theme_mods['accent_color'] . ' !important;
 				}';
 			}
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Smart_Coupons' ) ) {
 				$woocommerce_extension_style .= '
 				.coupon-container {
-					background-color: ' . $storefront_theme_mods['button_background_color'] . ' !important;
+					background-color: ' . $emporium_theme_mods['button_background_color'] . ' !important;
 				}
 
 				.coupon-content {
-					border-color: ' . $storefront_theme_mods['button_text_color'] . ' !important;
-					color: ' . $storefront_theme_mods['button_text_color'] . ';
+					border-color: ' . $emporium_theme_mods['button_text_color'] . ' !important;
+					color: ' . $emporium_theme_mods['button_text_color'] . ';
 				}
 
 				.sd-buttons-transparent.woocommerce .coupon-content,
 				.sd-buttons-transparent.woocommerce-page .coupon-content {
-					border-color: ' . $storefront_theme_mods['button_background_color'] . ' !important;
+					border-color: ' . $emporium_theme_mods['button_background_color'] . ' !important;
 				}';
 			}
 
