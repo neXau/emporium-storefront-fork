@@ -63,18 +63,18 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			$starter_content = array(
 				'posts'       => array(
 					'home'    => array(
-						'post_title' => esc_attr__( 'Homepage', 'storefront' ),
+						'post_title' => esc_attr__( 'Homepage', 'emporium' ),
 						'template'   => 'template-fullwidth.php',
 					),
 					'about'   => array(
 						'post_type'    => 'page',
-						'post_title'   => __( 'About', 'storefront' ),
-						'post_content' => __( 'You might be an artist who would like to introduce yourself and your work here or maybe you&rsquo;re a business with a mission to describe.', 'storefront' ),
+						'post_title'   => __( 'About', 'emporium' ),
+						'post_content' => __( 'You might be an artist who would like to introduce yourself and your work here or maybe you&rsquo;re a business with a mission to describe.', 'emporium' ),
 					),
 					'contact' => array(
 						'post_type'    => 'page',
-						'post_title'   => __( 'Contact', 'storefront' ),
-						'post_content' => __( 'This is a page with some basic contact information, such as an address and phone number. You might also try a plugin to add a contact form.', 'storefront' ),
+						'post_title'   => __( 'Contact', 'emporium' ),
+						'post_content' => __( 'This is a page with some basic contact information, such as an address and phone number. You might also try a plugin to add a contact form.', 'emporium' ),
 					),
 					'blog',
 				),
@@ -159,7 +159,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				),
 				'nav_menus'   => array(
 					'primary'   => array(
-						'name'  => __( 'Primary Menu', 'storefront' ),
+						'name'  => __( 'Primary Menu', 'emporium' ),
 						'items' => array(
 							'shop'         => array(
 								'type'      => 'post_type',
@@ -179,7 +179,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						),
 					),
 					'secondary' => array(
-						'name'  => __( 'Secondary Menu', 'storefront' ),
+						'name'  => __( 'Secondary Menu', 'emporium' ),
 						'items' => array(
 							'my_account' => array(
 								'type'      => 'post_type',
@@ -189,7 +189,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						),
 					),
 					'handheld'  => array(
-						'name'  => __( 'Handheld Menu', 'storefront' ),
+						'name'  => __( 'Handheld Menu', 'emporium' ),
 						'items' => array(
 							'shop' => array(
 								'type'      => 'post_type',
@@ -701,19 +701,19 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @since 2.2.0
 		 */
 		private function starter_content_products() {
-			$accessories_name        = esc_attr__( 'Accessories', 'storefront' );
-			$accessories_description = esc_attr__( 'A short category description', 'storefront' );
+			$accessories_name        = esc_attr__( 'Accessories', 'emporium' );
+			$accessories_description = esc_attr__( 'A short category description', 'emporium' );
 
-			$hoodies_name        = esc_attr__( 'Hoodies', 'storefront' );
-			$hoodies_description = esc_attr__( 'A short category description', 'storefront' );
+			$hoodies_name        = esc_attr__( 'Hoodies', 'emporium' );
+			$hoodies_description = esc_attr__( 'A short category description', 'emporium' );
 
-			$tshirts_name        = esc_attr__( 'Tshirts', 'storefront' );
-			$tshirts_description = esc_attr__( 'A short category description', 'storefront' );
+			$tshirts_name        = esc_attr__( 'Tshirts', 'emporium' );
+			$tshirts_description = esc_attr__( 'A short category description', 'emporium' );
 
 			$products = array(
 				// Accessories.
 				'beanie'             => array(
-					'post_title'     => esc_attr__( 'Beanie', 'storefront' ),
+					'post_title'     => esc_attr__( 'Beanie', 'emporium' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
@@ -735,7 +735,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 				'belt'               => array(
-					'post_title'     => esc_attr__( 'Belt', 'storefront' ),
+					'post_title'     => esc_attr__( 'Belt', 'emporium' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
@@ -757,7 +757,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 				'cap'                => array(
-					'post_title'     => esc_attr__( 'Cap', 'storefront' ),
+					'post_title'     => esc_attr__( 'Cap', 'emporium' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
@@ -779,7 +779,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 				'sunglasses'         => array(
-					'post_title'     => esc_attr__( 'Sunglasses', 'storefront' ),
+					'post_title'     => esc_attr__( 'Sunglasses', 'emporium' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
@@ -800,7 +800,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 				'hoodie-with-logo'   => array(
-					'post_title'     => esc_attr__( 'Hoodie with Logo', 'storefront' ),
+					'post_title'     => esc_attr__( 'Hoodie with Logo', 'emporium' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
@@ -821,7 +821,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 				'hoodie-with-pocket' => array(
-					'post_title'     => esc_attr__( 'Hoodie with Pocket', 'storefront' ),
+					'post_title'     => esc_attr__( 'Hoodie with Pocket', 'emporium' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
@@ -843,7 +843,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 				'hoodie-with-zipper' => array(
-					'post_title'     => esc_attr__( 'Hoodie with Zipper', 'storefront' ),
+					'post_title'     => esc_attr__( 'Hoodie with Zipper', 'emporium' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
@@ -864,7 +864,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 				'hoodie'             => array(
-					'post_title'     => esc_attr__( 'Hoodie', 'storefront' ),
+					'post_title'     => esc_attr__( 'Hoodie', 'emporium' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
@@ -886,7 +886,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 				'long-sleeve-tee'    => array(
-					'post_title'     => esc_attr__( 'Long Sleeve Tee', 'storefront' ),
+					'post_title'     => esc_attr__( 'Long Sleeve Tee', 'emporium' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
@@ -907,7 +907,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 				'polo'               => array(
-					'post_title'     => esc_attr__( 'Polo', 'storefront' ),
+					'post_title'     => esc_attr__( 'Polo', 'emporium' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
@@ -928,7 +928,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 				'tshirt'             => array(
-					'post_title'     => esc_attr__( 'Tshirt', 'storefront' ),
+					'post_title'     => esc_attr__( 'Tshirt', 'emporium' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
@@ -949,7 +949,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 				'vneck-tee'          => array(
-					'post_title'     => esc_attr__( 'Vneck Tshirt', 'storefront' ),
+					'post_title'     => esc_attr__( 'Vneck Tshirt', 'emporium' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
@@ -1018,7 +1018,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				{{cover}}
 
 				<!-- wp:heading {"align":"center"} -->
-				<h2 style="text-align:center">' . __( 'Shop by Category', 'storefront' ) . '</h2>
+				<h2 style="text-align:center">' . __( 'Shop by Category', 'emporium' ) . '</h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:shortcode -->
@@ -1026,7 +1026,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				<!-- /wp:shortcode -->
 
 				<!-- wp:heading {"align":"center"} -->
-				<h2 style="text-align:center">' . __( 'New In', 'storefront' ) . '</h2>
+				<h2 style="text-align:center">' . __( 'New In', 'emporium' ) . '</h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:woocommerce/product-new {"columns":4} /-->
@@ -1034,19 +1034,19 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				{{handpicked-products}}
 
 				<!-- wp:heading {"align":"center"} -->
-				<h2 style="text-align:center">' . __( 'Fan Favorites', 'storefront' ) . '</h2>
+				<h2 style="text-align:center">' . __( 'Fan Favorites', 'emporium' ) . '</h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:woocommerce/product-top-rated {"columns":4} /-->
 
 				<!-- wp:heading {"align":"center"} -->
-				<h2 style="text-align:center">' . __( 'On Sale', 'storefront' ) . '</h2>
+				<h2 style="text-align:center">' . __( 'On Sale', 'emporium' ) . '</h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:woocommerce/product-on-sale {"columns":4} /-->
 
 				<!-- wp:heading {"align":"center"} -->
-				<h2 style="text-align:center">' . __( 'Best Sellers', 'storefront' ) . '</h2>
+				<h2 style="text-align:center">' . __( 'Best Sellers', 'emporium' ) . '</h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:woocommerce/product-best-sellers {"columns":4} /-->
@@ -1071,15 +1071,15 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				$cover = '
 					<!-- wp:cover {"url":"{{hero-image-url}}","id":{{hero-image-id}},"dimRatio":0,"customOverlayColor":"#ffffff","align":"full"} -->
 					<div class="wp-block-cover alignfull" style="background-image:url({{hero-image-url}});background-color:#ffffff"><div class="wp-block-cover__inner-container"><!-- wp:heading {"level":1,"align":"center"} -->
-					<h1 style="text-align:center">' . __( 'Welcome', 'storefront' ) . '</h1>
+					<h1 style="text-align:center">' . __( 'Welcome', 'emporium' ) . '</h1>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center","customTextColor":"#000000"} -->
-					<p style="color:#000000;text-align:center" class="has-text-color">' . __( 'This is your homepage which is what most visitors will see when they first visit your shop.', 'storefront' ) . '</p>
+					<p style="color:#000000;text-align:center" class="has-text-color">' . __( 'This is your homepage which is what most visitors will see when they first visit your shop.', 'emporium' ) . '</p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"align":"center","customTextColor":"#000000"} -->
-					<p style="color:#000000;text-align:center" class="has-text-color">' . __( 'You can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'storefront' ) . '</p>
+					<p style="color:#000000;text-align:center" class="has-text-color">' . __( 'You can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'emporium' ) . '</p>
 					<!-- /wp:paragraph --></div></div>
 					<!-- /wp:cover -->
 				';
@@ -1105,7 +1105,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			if ( ! empty( $products ) ) {
 				$handpicked = '
 					<!-- wp:heading {"align":"center"} -->
-					<h2 style="text-align:center">' . __( 'We Recommend', 'storefront' ) . '</h2>
+					<h2 style="text-align:center">' . __( 'We Recommend', 'emporium' ) . '</h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:woocommerce/handpicked-products {"columns":4,"editMode":false,"products":[{{handpicked-products}}]} /-->

@@ -24,7 +24,7 @@ $emporium = (object) array(
 	/**
 	 * Initialize all the things.
 	 */
-	'main'       => require 'inc/class-storefront.php',
+	'main'       => require 'inc/class-emporium.php',
 	'customizer' => require 'inc/customizer/class-storefront-customizer.php',
 );
 

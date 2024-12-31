@@ -31,15 +31,15 @@ if ( ! class_exists( 'Storefront_NUX_Admin_Inbox_Messages_Customize' ) ) :
 		 */
 		public static function get_note() {
 			$note = new Note();
-			$note->set_title( __( 'Design your store with Storefront 🎨', 'storefront' ) );
-			$note->set_content( __( 'Visit the Storefront settings page to start setup and customization of your shop.', 'storefront' ) );
+			$note->set_title( __( 'Design your store with Storefront 🎨', 'emporium' ) );
+			$note->set_content( __( 'Visit the Storefront settings page to start setup and customization of your shop.', 'emporium' ) );
 			$note->set_type( Note::E_WC_ADMIN_NOTE_INFORMATIONAL );
 			$note->set_name( self::NOTE_NAME );
 			$note->set_content_data( (object) array() );
-			$note->set_source( 'storefront' );
+			$note->set_source( 'emporium' );
 			$note->add_action(
 				'customize-store-with-storefront',
-				__( 'Let\'s go!', 'storefront' ),
+				__( 'Let\'s go!', 'emporium' ),
 				admin_url( 'themes.php?page=storefront-welcome' ),
 				Note::E_WC_ADMIN_NOTE_ACTIONED,
 				true

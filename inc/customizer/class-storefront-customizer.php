@@ -127,11 +127,11 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->get_control( 'background_color' )->priority = 20;
 
 			// Change background image section title & priority.
-			$wp_customize->get_section( 'background_image' )->title    = __( 'Background', 'storefront' );
+			$wp_customize->get_section( 'background_image' )->title    = __( 'Background', 'emporium' );
 			$wp_customize->get_section( 'background_image' )->priority = 30;
 
 			// Change header image section title & priority.
-			$wp_customize->get_section( 'header_image' )->title    = __( 'Header', 'storefront' );
+			$wp_customize->get_section( 'header_image' )->title    = __( 'Header', 'emporium' );
 			$wp_customize->get_section( 'header_image' )->priority = 25;
 
 			// Selective refresh.
@@ -187,7 +187,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_section(
 				'storefront_typography',
 				array(
-					'title'    => __( 'Typography', 'storefront' ),
+					'title'    => __( 'Typography', 'emporium' ),
 					'priority' => 45,
 				)
 			);
@@ -215,7 +215,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_heading_color',
 					array(
-						'label'    => __( 'Heading color', 'storefront' ),
+						'label'    => __( 'Heading color', 'emporium' ),
 						'section'  => 'storefront_typography',
 						'settings' => 'storefront_heading_color',
 						'priority' => 20,
@@ -246,7 +246,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_text_color',
 					array(
-						'label'    => __( 'Text color', 'storefront' ),
+						'label'    => __( 'Text color', 'emporium' ),
 						'section'  => 'storefront_typography',
 						'settings' => 'storefront_text_color',
 						'priority' => 30,
@@ -277,7 +277,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_accent_color',
 					array(
-						'label'    => __( 'Link / accent color', 'storefront' ),
+						'label'    => __( 'Link / accent color', 'emporium' ),
 						'section'  => 'storefront_typography',
 						'settings' => 'storefront_accent_color',
 						'priority' => 40,
@@ -308,7 +308,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_hero_heading_color',
 					array(
-						'label'    => __( 'Hero heading color', 'storefront' ),
+						'label'    => __( 'Hero heading color', 'emporium' ),
 						'section'  => 'storefront_typography',
 						'settings' => 'storefront_hero_heading_color',
 						'priority' => 50,
@@ -339,7 +339,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_hero_text_color',
 					array(
-						'label'    => __( 'Hero text color', 'storefront' ),
+						'label'    => __( 'Hero text color', 'emporium' ),
 						'section'  => 'storefront_typography',
 						'settings' => 'storefront_hero_text_color',
 						'priority' => 60,
@@ -354,7 +354,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					array(
 						'section'  => 'header_image',
 						'type'     => 'heading',
-						'label'    => __( 'Header background image', 'storefront' ),
+						'label'    => __( 'Header background image', 'emporium' ),
 						'priority' => 6,
 					)
 				)
@@ -383,7 +383,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_header_background_color',
 					array(
-						'label'    => __( 'Background color', 'storefront' ),
+						'label'    => __( 'Background color', 'emporium' ),
 						'section'  => 'header_image',
 						'settings' => 'storefront_header_background_color',
 						'priority' => 15,
@@ -414,7 +414,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_header_text_color',
 					array(
-						'label'    => __( 'Text color', 'storefront' ),
+						'label'    => __( 'Text color', 'emporium' ),
 						'section'  => 'header_image',
 						'settings' => 'storefront_header_text_color',
 						'priority' => 20,
@@ -445,7 +445,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_header_link_color',
 					array(
-						'label'    => __( 'Link color', 'storefront' ),
+						'label'    => __( 'Link color', 'emporium' ),
 						'section'  => 'header_image',
 						'settings' => 'storefront_header_link_color',
 						'priority' => 30,
@@ -459,9 +459,9 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_section(
 				'storefront_footer',
 				array(
-					'title'       => __( 'Footer', 'storefront' ),
+					'title'       => __( 'Footer', 'emporium' ),
 					'priority'    => 28,
-					'description' => __( 'Customize the look & feel of your website footer.', 'storefront' ),
+					'description' => __( 'Customize the look & feel of your website footer.', 'emporium' ),
 				)
 			);
 
@@ -488,7 +488,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_footer_background_color',
 					array(
-						'label'    => __( 'Background color', 'storefront' ),
+						'label'    => __( 'Background color', 'emporium' ),
 						'section'  => 'storefront_footer',
 						'settings' => 'storefront_footer_background_color',
 						'priority' => 10,
@@ -519,7 +519,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_footer_heading_color',
 					array(
-						'label'    => __( 'Heading color', 'storefront' ),
+						'label'    => __( 'Heading color', 'emporium' ),
 						'section'  => 'storefront_footer',
 						'settings' => 'storefront_footer_heading_color',
 						'priority' => 20,
@@ -550,7 +550,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_footer_text_color',
 					array(
-						'label'    => __( 'Text color', 'storefront' ),
+						'label'    => __( 'Text color', 'emporium' ),
 						'section'  => 'storefront_footer',
 						'settings' => 'storefront_footer_text_color',
 						'priority' => 30,
@@ -581,7 +581,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_footer_link_color',
 					array(
-						'label'    => __( 'Link color', 'storefront' ),
+						'label'    => __( 'Link color', 'emporium' ),
 						'section'  => 'storefront_footer',
 						'settings' => 'storefront_footer_link_color',
 						'priority' => 40,
@@ -595,9 +595,9 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_section(
 				'storefront_buttons',
 				array(
-					'title'       => __( 'Buttons', 'storefront' ),
+					'title'       => __( 'Buttons', 'emporium' ),
 					'priority'    => 45,
-					'description' => __( 'Customize the look & feel of your website buttons.', 'storefront' ),
+					'description' => __( 'Customize the look & feel of your website buttons.', 'emporium' ),
 				)
 			);
 
@@ -624,7 +624,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_button_background_color',
 					array(
-						'label'    => __( 'Background color', 'storefront' ),
+						'label'    => __( 'Background color', 'emporium' ),
 						'section'  => 'storefront_buttons',
 						'settings' => 'storefront_button_background_color',
 						'priority' => 10,
@@ -655,7 +655,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_button_text_color',
 					array(
-						'label'    => __( 'Text color', 'storefront' ),
+						'label'    => __( 'Text color', 'emporium' ),
 						'section'  => 'storefront_buttons',
 						'settings' => 'storefront_button_text_color',
 						'priority' => 20,
@@ -686,7 +686,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_button_alt_background_color',
 					array(
-						'label'    => __( 'Alternate button background color', 'storefront' ),
+						'label'    => __( 'Alternate button background color', 'emporium' ),
 						'section'  => 'storefront_buttons',
 						'settings' => 'storefront_button_alt_background_color',
 						'priority' => 30,
@@ -717,7 +717,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					$wp_customize,
 					'storefront_button_alt_text_color',
 					array(
-						'label'    => __( 'Alternate button text color', 'storefront' ),
+						'label'    => __( 'Alternate button text color', 'emporium' ),
 						'section'  => 'storefront_buttons',
 						'settings' => 'storefront_button_alt_text_color',
 						'priority' => 40,
@@ -731,7 +731,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_section(
 				'storefront_layout',
 				array(
-					'title'    => __( 'Layout', 'storefront' ),
+					'title'    => __( 'Layout', 'emporium' ),
 					'priority' => 50,
 				)
 			);
@@ -758,7 +758,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					array(
 						'settings' => 'storefront_layout',
 						'section'  => 'storefront_layout',
-						'label'    => __( 'General Layout', 'storefront' ),
+						'label'    => __( 'General Layout', 'emporium' ),
 						'priority' => 1,
 						'choices'  => array(
 							'right' => get_template_directory_uri() . '/assets/images/customizer/controls/2cr.png',
@@ -779,7 +779,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				$wp_customize->add_section(
 					'storefront_more',
 					array(
-						'title'    => __( 'More', 'storefront' ),
+						'title'    => __( 'More', 'emporium' ),
 						'priority' => 999,
 					)
 				);
@@ -797,7 +797,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 						$wp_customize,
 						'storefront_more',
 						array(
-							'label'    => __( 'Looking for more options?', 'storefront' ),
+							'label'    => __( 'Looking for more options?', 'emporium' ),
 							'section'  => 'storefront_more',
 							'settings' => 'storefront_more',
 							'priority' => 1,

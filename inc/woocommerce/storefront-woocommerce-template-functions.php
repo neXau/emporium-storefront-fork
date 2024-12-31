@@ -88,9 +88,9 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 			return;
 		}
 		?>
-			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'emporium' ); ?>">
 				<?php /* translators: %d: number of items in cart */ ?>
-				<?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
+				<?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'emporium' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
 			</a>
 		<?php
 	}
@@ -300,7 +300,7 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 				'columns'          => 3,
 				'child_categories' => 0,
 				'orderby'          => 'menu_order',
-				'title'            => __( 'Shop by Category', 'storefront' ),
+				'title'            => __( 'Shop by Category', 'emporium' ),
 			)
 		);
 
@@ -321,7 +321,7 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 		 * Only display the section if the shortcode returns product categories
 		 */
 		if ( false !== strpos( $shortcode_content, 'product-category' ) ) {
-			echo '<section class="storefront-product-section storefront-product-categories" aria-label="' . esc_attr__( 'Product Categories', 'storefront' ) . '">';
+			echo '<section class="storefront-product-section storefront-product-categories" aria-label="' . esc_attr__( 'Product Categories', 'emporium' ) . '">';
 
 			do_action( 'storefront_homepage_before_product_categories' );
 
@@ -355,7 +355,7 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 				'columns' => 4,
 				'orderby' => 'date',
 				'order'   => 'desc',
-				'title'   => __( 'New In', 'storefront' ),
+				'title'   => __( 'New In', 'emporium' ),
 			)
 		);
 
@@ -376,7 +376,7 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 		 * Only display the section if the shortcode returns products
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
-			echo '<section class="storefront-product-section storefront-recent-products" aria-label="' . esc_attr__( 'Recent Products', 'storefront' ) . '">';
+			echo '<section class="storefront-product-section storefront-recent-products" aria-label="' . esc_attr__( 'Recent Products', 'emporium' ) . '">';
 
 			do_action( 'storefront_homepage_before_recent_products' );
 
@@ -411,7 +411,7 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 				'orderby'    => 'date',
 				'order'      => 'desc',
 				'visibility' => 'featured',
-				'title'      => __( 'We Recommend', 'storefront' ),
+				'title'      => __( 'We Recommend', 'emporium' ),
 			)
 		);
 
@@ -433,7 +433,7 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 		 * Only display the section if the shortcode returns products
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
-			echo '<section class="storefront-product-section storefront-featured-products" aria-label="' . esc_attr__( 'Featured Products', 'storefront' ) . '">';
+			echo '<section class="storefront-product-section storefront-featured-products" aria-label="' . esc_attr__( 'Featured Products', 'emporium' ) . '">';
 
 			do_action( 'storefront_homepage_before_featured_products' );
 
@@ -467,7 +467,7 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 				'columns' => 4,
 				'orderby' => 'rating',
 				'order'   => 'desc',
-				'title'   => __( 'Fan Favorites', 'storefront' ),
+				'title'   => __( 'Fan Favorites', 'emporium' ),
 			)
 		);
 
@@ -488,7 +488,7 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 		 * Only display the section if the shortcode returns products
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
-			echo '<section class="storefront-product-section storefront-popular-products" aria-label="' . esc_attr__( 'Popular Products', 'storefront' ) . '">';
+			echo '<section class="storefront-product-section storefront-popular-products" aria-label="' . esc_attr__( 'Popular Products', 'emporium' ) . '">';
 
 			do_action( 'storefront_homepage_before_popular_products' );
 
@@ -523,7 +523,7 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 				'orderby' => 'date',
 				'order'   => 'desc',
 				'on_sale' => 'true',
-				'title'   => __( 'On Sale', 'storefront' ),
+				'title'   => __( 'On Sale', 'emporium' ),
 			)
 		);
 
@@ -545,7 +545,7 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 		 * Only display the section if the shortcode returns products
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
-			echo '<section class="storefront-product-section storefront-on-sale-products" aria-label="' . esc_attr__( 'On Sale Products', 'storefront' ) . '">';
+			echo '<section class="storefront-product-section storefront-on-sale-products" aria-label="' . esc_attr__( 'On Sale Products', 'emporium' ) . '">';
 
 			do_action( 'storefront_homepage_before_on_sale_products' );
 
@@ -579,7 +579,7 @@ if ( ! function_exists( 'storefront_best_selling_products' ) ) {
 				'columns' => 4,
 				'orderby' => 'popularity',
 				'order'   => 'desc',
-				'title'   => esc_attr__( 'Best Sellers', 'storefront' ),
+				'title'   => esc_attr__( 'Best Sellers', 'emporium' ),
 			)
 		);
 
@@ -600,7 +600,7 @@ if ( ! function_exists( 'storefront_best_selling_products' ) ) {
 		 * Only display the section if the shortcode returns products
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
-			echo '<section class="storefront-product-section storefront-best-selling-products" aria-label="' . esc_attr__( 'Best Selling Products', 'storefront' ) . '">';
+			echo '<section class="storefront-product-section storefront-best-selling-products" aria-label="' . esc_attr__( 'Best Selling Products', 'emporium' ) . '">';
 
 			do_action( 'storefront_homepage_before_best_selling_products' );
 
@@ -638,7 +638,7 @@ if ( ! function_exists( 'storefront_promoted_products' ) ) {
 
 			if ( wc_get_featured_product_ids() ) {
 
-				echo '<h2>' . esc_html__( 'Featured Products', 'storefront' ) . '</h2>';
+				echo '<h2>' . esc_html__( 'Featured Products', 'emporium' ) . '</h2>';
 
 				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo storefront_do_shortcode(
@@ -651,7 +651,7 @@ if ( ! function_exists( 'storefront_promoted_products' ) ) {
 				// phpcs:enable
 			} elseif ( wc_get_product_ids_on_sale() ) {
 
-				echo '<h2>' . esc_html__( 'On Sale Now', 'storefront' ) . '</h2>';
+				echo '<h2>' . esc_html__( 'On Sale Now', 'emporium' ) . '</h2>';
 
 				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo storefront_do_shortcode(
@@ -664,7 +664,7 @@ if ( ! function_exists( 'storefront_promoted_products' ) ) {
 				// phpcs:enable
 			} elseif ( $recent_fallback ) {
 
-				echo '<h2>' . esc_html__( 'New In Store', 'storefront' ) . '</h2>';
+				echo '<h2>' . esc_html__( 'New In Store', 'emporium' ) . '</h2>';
 
 				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo storefront_do_shortcode(
@@ -740,7 +740,7 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_search' ) ) {
 	 * @since 2.0.0
 	 */
 	function storefront_handheld_footer_bar_search() {
-		echo '<a href="">' . esc_attr__( 'Search', 'storefront' ) . '</a>';
+		echo '<a href="">' . esc_attr__( 'Search', 'emporium' ) . '</a>';
 		storefront_product_search();
 	}
 }
@@ -756,7 +756,7 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_cart_link' ) ) {
 			return;
 		}
 		?>
-			<a class="footer-cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>"><?php esc_html_e( 'Cart', 'storefront' ); ?>
+			<a class="footer-cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>"><?php esc_html_e( 'Cart', 'emporium' ); ?>
 				<span class="count"><?php echo wp_kses_data( WC()->cart->get_cart_contents_count() ); ?></span>
 			</a>
 		<?php
@@ -770,7 +770,7 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_account_link' ) ) {
 	 * @since 2.0.0
 	 */
 	function storefront_handheld_footer_bar_account_link() {
-		echo '<a href="' . esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) . '">' . esc_attr__( 'My Account', 'storefront' ) . '</a>';
+		echo '<a href="' . esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) . '">' . esc_attr__( 'My Account', 'emporium' ) . '</a>';
 	}
 }
 
@@ -800,7 +800,7 @@ if ( ! function_exists( 'storefront_single_product_pagination' ) ) {
 		}
 
 		?>
-		<nav class="storefront-product-pagination" aria-label="<?php esc_attr_e( 'More products', 'storefront' ); ?>">
+		<nav class="storefront-product-pagination" aria-label="<?php esc_attr_e( 'More products', 'emporium' ); ?>">
 			<?php if ( $previous_product ) : ?>
 				<a href="<?php echo esc_url( $previous_product->get_permalink() ); ?>" rel="prev">
 					<?php echo wp_kses_post( $previous_product->get_image() ); ?>
@@ -864,7 +864,7 @@ if ( ! function_exists( 'storefront_sticky_single_add_to_cart' ) ) {
 					<div class="storefront-sticky-add-to-cart__content">
 						<?php echo wp_kses_post( woocommerce_get_product_thumbnail() ); ?>
 						<div class="storefront-sticky-add-to-cart__content-product-info">
-							<span class="storefront-sticky-add-to-cart__content-title"><?php esc_html_e( 'You\'re viewing:', 'storefront' ); ?> <strong><?php the_title(); ?></strong></span>
+							<span class="storefront-sticky-add-to-cart__content-title"><?php esc_html_e( 'You\'re viewing:', 'emporium' ); ?> <strong><?php the_title(); ?></strong></span>
 							<span class="storefront-sticky-add-to-cart__content-price"><?php echo wp_kses_post( $product->get_price_html() ); ?></span>
 							<?php echo wp_kses_post( wc_get_rating_html( $product->get_average_rating() ) ); ?>
 						</div>
@@ -900,7 +900,7 @@ if ( ! function_exists( 'storefront_woocommerce_brands_homepage_section' ) ) {
 				'columns'    => 4,
 				'orderby'    => 'name',
 				'show_empty' => false,
-				'title'      => __( 'Shop by Brand', 'storefront' ),
+				'title'      => __( 'Shop by Brand', 'emporium' ),
 			)
 		);
 
@@ -917,7 +917,7 @@ if ( ! function_exists( 'storefront_woocommerce_brands_homepage_section' ) ) {
 			)
 		);
 
-		echo '<section class="storefront-product-section storefront-woocommerce-brands" aria-label="' . esc_attr__( 'Product Brands', 'storefront' ) . '">';
+		echo '<section class="storefront-product-section storefront-woocommerce-brands" aria-label="' . esc_attr__( 'Product Brands', 'emporium' ) . '">';
 
 		do_action( 'storefront_homepage_before_woocommerce_brands' );
 

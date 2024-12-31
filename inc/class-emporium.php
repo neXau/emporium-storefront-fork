@@ -1,21 +1,38 @@
 <?php
 /**
- * Storefront Class
+ * Emporium Class
+ *
+ * This class is the core of the Storefront WordPress theme. It sets up 
+ * the theme's functionality and integrates WordPress features, ensuring 
+ * compatibility with WooCommerce and providing a customizable foundation 
+ * for building eCommerce websites. 
+ *
+ * Key responsibilities include:
+ * - Registering theme support for WordPress features (e.g., custom logos, 
+ *   thumbnails, responsive embeds, and block styles).
+ * - Enqueueing scripts and styles for both frontend and editor.
+ * - Setting up theme translations and localization support.
+ * - Defining navigation menus and widget areas.
+ * - Adding filters and actions to customize the theme's behavior.
+ *
+ * This class acts as the central manager for the theme, handling both 
+ * user-facing and administrative configurations to provide a seamless 
+ * experience for developers and users.
  *
  * @since    2.0.0
- * @package  storefront
+ * @package  emporium
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'Storefront' ) ) :
+if ( ! class_exists( 'Emporium' ) ) :
 
 	/**
-	 * The main Storefront class
+	 * The main Emporium class
 	 */
-	class Storefront {
+	class Emporium {
 
 		/**
 		 * Setup class.
@@ -49,13 +66,13 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 */
 
 			// Loads wp-content/languages/themes/storefront-it_IT.mo.
-			load_theme_textdomain( 'storefront', trailingslashit( WP_LANG_DIR ) . 'themes' );
+			load_theme_textdomain( 'emporium', trailingslashit( WP_LANG_DIR ) . 'themes' );
 
 			// Loads wp-content/themes/child-theme-name/languages/it_IT.mo.
-			load_theme_textdomain( 'storefront', get_stylesheet_directory() . '/languages' );
+			load_theme_textdomain( 'emporium', get_stylesheet_directory() . '/languages' );
 
 			// Loads wp-content/themes/storefront/languages/it_IT.mo.
-			load_theme_textdomain( 'storefront', get_template_directory() . '/languages' );
+			load_theme_textdomain( 'emporium', get_template_directory() . '/languages' );
 
 			/**
 			 * Add default posts and comments RSS feed links to head.
@@ -92,9 +109,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 				apply_filters(
 					'storefront_register_nav_menus',
 					array(
-						'primary'   => __( 'Primary Menu', 'storefront' ),
-						'secondary' => __( 'Secondary Menu', 'storefront' ),
-						'handheld'  => __( 'Handheld Menu', 'storefront' ),
+						'primary'   => __( 'Primary Menu', 'emporium' ),
+						'secondary' => __( 'Secondary Menu', 'emporium' ),
+						'handheld'  => __( 'Handheld Menu', 'emporium' ),
 					)
 				)
 			);
@@ -184,27 +201,27 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'editor-font-sizes',
 				array(
 					array(
-						'name' => __( 'Small', 'storefront' ),
+						'name' => __( 'Small', 'emporium' ),
 						'size' => 14,
 						'slug' => 'small',
 					),
 					array(
-						'name' => __( 'Normal', 'storefront' ),
+						'name' => __( 'Normal', 'emporium' ),
 						'size' => 16,
 						'slug' => 'normal',
 					),
 					array(
-						'name' => __( 'Medium', 'storefront' ),
+						'name' => __( 'Medium', 'emporium' ),
 						'size' => 23,
 						'slug' => 'medium',
 					),
 					array(
-						'name' => __( 'Large', 'storefront' ),
+						'name' => __( 'Large', 'emporium' ),
 						'size' => 26,
 						'slug' => 'large',
 					),
 					array(
-						'name' => __( 'Huge', 'storefront' ),
+						'name' => __( 'Huge', 'emporium' ),
 						'size' => 37,
 						'slug' => 'huge',
 					),
@@ -248,15 +265,15 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 */
 		public function widgets_init() {
 			$sidebar_args['sidebar'] = array(
-				'name'        => __( 'Sidebar', 'storefront' ),
+				'name'        => __( 'Sidebar', 'emporium' ),
 				'id'          => 'sidebar-1',
 				'description' => '',
 			);
 
 			$sidebar_args['header'] = array(
-				'name'        => __( 'Below Header', 'storefront' ),
+				'name'        => __( 'Below Header', 'emporium' ),
 				'id'          => 'header-1',
-				'description' => __( 'Widgets added to this region will appear beneath the header and above the main content.', 'storefront' ),
+				'description' => __( 'Widgets added to this region will appear beneath the header and above the main content.', 'emporium' ),
 			);
 
 			$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 1 ) );
@@ -269,16 +286,16 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 					if ( 1 === $rows ) {
 						/* translators: 1: column number */
-						$footer_region_name = sprintf( __( 'Footer Column %1$d', 'storefront' ), $region );
+						$footer_region_name = sprintf( __( 'Footer Column %1$d', 'emporium' ), $region );
 
 						/* translators: 1: column number */
-						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of the footer.', 'storefront' ), $region );
+						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of the footer.', 'emporium' ), $region );
 					} else {
 						/* translators: 1: row number, 2: column number */
-						$footer_region_name = sprintf( __( 'Footer Row %1$d - Column %2$d', 'storefront' ), $row, $region );
+						$footer_region_name = sprintf( __( 'Footer Row %1$d - Column %2$d', 'emporium' ), $row, $region );
 
 						/* translators: 1: column number, 2: row number */
-						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of footer row %2$d.', 'storefront' ), $region, $row );
+						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of footer row %2$d.', 'emporium' ), $region, $row );
 					}
 
 					$sidebar_args[ $footer ] = array(
@@ -352,8 +369,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			if ( has_nav_menu( 'handheld' ) ) {
 				$emporium_l10n = array(
-					'expand'   => __( 'Expand child menu', 'storefront' ),
-					'collapse' => __( 'Collapse child menu', 'storefront' ),
+					'expand'   => __( 'Expand child menu', 'emporium' ),
+					'collapse' => __( 'Collapse child menu', 'emporium' ),
 				);
 
 				wp_localize_script( 'storefront-navigation', 'storefrontScreenReaderText', $emporium_l10n );
@@ -487,7 +504,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * Custom navigation markup template hooked into `navigation_markup_template` filter hook.
 		 */
 		public function navigation_markup_template() {
-			$template  = '<nav id="post-navigation" class="navigation %1$s" role="navigation" aria-label="' . esc_html__( 'Post Navigation', 'storefront' ) . '">';
+			$template  = '<nav id="post-navigation" class="navigation %1$s" role="navigation" aria-label="' . esc_html__( 'Post Navigation', 'emporium' ) . '">';
 			$template .= '<h2 class="screen-reader-text">%2$s</h2>';
 			$template .= '<div class="nav-links">%3$s</div>';
 			$template .= '</nav>';
@@ -545,4 +562,4 @@ if ( ! class_exists( 'Storefront' ) ) :
 	}
 endif;
 
-return new Storefront();
+return new Emporium();

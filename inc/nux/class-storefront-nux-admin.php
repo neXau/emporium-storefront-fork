@@ -125,19 +125,19 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			?>
 				<div class="notice-content">
 					<?php if ( ! storefront_is_woocommerce_activated() && current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ) ) : ?>
-						<h2><?php esc_html_e( 'Thanks for installing Storefront, you rock! 🤘', 'storefront' ); ?></h2>
-						<p><?php esc_html_e( 'To enable eCommerce features you need to install the WooCommerce plugin.', 'storefront' ); ?></p>
-						<p><?php Storefront_Plugin_Install::install_plugin_button( 'woocommerce', 'woocommerce.php', 'WooCommerce', array(), __( 'WooCommerce activated', 'storefront' ), __( 'Activate WooCommerce', 'storefront' ), __( 'Install WooCommerce', 'storefront' ) ); ?></p>
+						<h2><?php esc_html_e( 'Thanks for installing Storefront, you rock! 🤘', 'emporium' ); ?></h2>
+						<p><?php esc_html_e( 'To enable eCommerce features you need to install the WooCommerce plugin.', 'emporium' ); ?></p>
+						<p><?php Storefront_Plugin_Install::install_plugin_button( 'woocommerce', 'woocommerce.php', 'WooCommerce', array(), __( 'WooCommerce activated', 'emporium' ), __( 'Activate WooCommerce', 'emporium' ), __( 'Install WooCommerce', 'emporium' ) ); ?></p>
 					<?php endif; ?>
 
 					<?php if ( storefront_is_woocommerce_activated() ) : ?>
-						<h2><?php esc_html_e( 'Design your store 🎨', 'storefront' ); ?></h2>
+						<h2><?php esc_html_e( 'Design your store 🎨', 'emporium' ); ?></h2>
 						<p>
 							<?php
 							if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) && 'post-new.php' === $pagenow ) {
-								echo esc_html__( 'Before you add your first product let\'s design your store. We\'ll add some example products for you. When you\'re ready let\'s get started by adding your logo.', 'storefront' );
+								echo esc_html__( 'Before you add your first product let\'s design your store. We\'ll add some example products for you. When you\'re ready let\'s get started by adding your logo.', 'emporium' );
 							} else {
-								echo esc_html__( 'You\'ve set up WooCommerce, now it\'s time to give it some style! Let\'s get started by entering the Customizer and adding your logo.', 'storefront' );
+								echo esc_html__( 'You\'ve set up WooCommerce, now it\'s time to give it some style! Let\'s get started by entering the Customizer and adding your logo.', 'emporium' );
 							}
 							?>
 						</p>
@@ -159,9 +159,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 										<input type="checkbox" name="homepage" checked>
 										<?php
 										if ( 'page' === get_option( 'show_on_front' ) ) {
-											esc_html_e( 'Apply the Storefront homepage template', 'storefront' );
+											esc_html_e( 'Apply the Storefront homepage template', 'emporium' );
 										} else {
-											esc_html_e( 'Create a homepage using Storefront\'s homepage template', 'storefront' );
+											esc_html_e( 'Create a homepage using Storefront\'s homepage template', 'emporium' );
 										}
 										?>
 									</label>
@@ -171,14 +171,14 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 									<div class="notice-input">
 										<label>
 											<input type="checkbox" name="products" checked>
-											<?php esc_html_e( 'Add example products', 'storefront' ); ?>
+											<?php esc_html_e( 'Add example products', 'emporium' ); ?>
 										</label>
 									</div>
 								<?php endif; ?>
 							<?php endif; ?>
 
-							<input type="submit" name="storefront-guided-tour" class="sf-nux-button" value="<?php esc_attr_e( 'Let\'s go!', 'storefront' ); ?>">
-							<a href="#" class="sf-nux-dismiss-button" ><?php esc_html_e( 'Skip', 'storefront' ); ?></a>
+							<input type="submit" name="storefront-guided-tour" class="sf-nux-button" value="<?php esc_attr_e( 'Let\'s go!', 'emporium' ); ?>">
+							<a href="#" class="sf-nux-dismiss-button" ><?php esc_html_e( 'Skip', 'emporium' ); ?></a>
 						</form>
 					<?php endif; ?>
 				</div>
