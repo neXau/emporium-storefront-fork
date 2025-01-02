@@ -154,20 +154,20 @@ if ( ! class_exists( 'Emporium' ) ) :
 			/**
 			 * Setup the WordPress core custom header feature.
 			 */
-			add_theme_support(
-				'custom-header',
-				apply_filters(
-					'storefront_custom_header_args',
-					array(
-						'default-image' => '',
-						'header-text'   => false,
-						'width'         => 1950,
-						'height'        => 500,
-						'flex-width'    => true,
-						'flex-height'   => true,
-					)
-				)
-			);
+			// add_theme_support(
+			// 	'custom-header',
+			// 	apply_filters(
+			// 		'storefront_custom_header_args',
+			// 		array(
+			// 			'default-image' => '',
+			// 			'header-text'   => false,
+			// 			'width'         => 1950,
+			// 			'height'        => 500,
+			// 			'flex-width'    => true,
+			// 			'flex-height'   => true,
+			// 		)
+			// 	)
+			// );
 
 			/**
 			 * Declare support for title theme feature.

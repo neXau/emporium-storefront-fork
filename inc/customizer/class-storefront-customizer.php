@@ -456,14 +456,14 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			/**
 			 * Footer section
 			 */
-			$wp_customize->add_section(
-				'storefront_footer',
-				array(
-					'title'       => __( 'Footer', 'emporium' ),
-					'priority'    => 28,
-					'description' => __( 'Customize the look & feel of your website footer.', 'emporium' ),
-				)
-			);
+			// $wp_customize->add_section(
+			// 	'storefront_footer',
+			// 	array(
+			// 		'title'       => __( 'Footer', 'emporium' ),
+			// 		'priority'    => 28,
+			// 		'description' => __( 'Customize the look & feel of your website footer.', 'emporium' ),
+			// 	)
+			// );
 
 			/**
 			 * Footer Background
