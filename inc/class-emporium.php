@@ -140,16 +140,16 @@ if ( ! class_exists( 'Emporium' ) ) :
 			/**
 			 * Setup the WordPress core custom background feature.
 			 */
-			add_theme_support(
-				'custom-background',
-				apply_filters(
-					'storefront_custom_background_args',
-					array(
-						'default-color' => apply_filters( 'storefront_default_background_color', 'ffffff' ),
-						'default-image' => '',
-					)
-				)
-			);
+			// add_theme_support(
+			// 	'custom-background',
+			// 	apply_filters(
+			// 		'storefront_custom_background_args',
+			// 		array(
+			// 			'default-color' => apply_filters( 'storefront_default_background_color', 'ffffff' ),
+			// 			'default-image' => '',
+			// 		)
+			// 	)
+			// );
 
 			/**
 			 * Setup the WordPress core custom header feature.
@@ -350,8 +350,8 @@ if ( ! class_exists( 'Emporium' ) ) :
 			wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $theme_version );
 			wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
 
-			wp_enqueue_style( 'storefront-icons', get_template_directory_uri() . '/assets/css/base/icons.css', '', $theme_version );
-			wp_style_add_data( 'storefront-icons', 'rtl', 'replace' );
+			// wp_enqueue_style( 'storefront-icons', get_template_directory_uri() . '/assets/css/base/icons.css', '', $theme_version );
+			// wp_style_add_data( 'storefront-icons', 'rtl', 'replace' );
 
 			/**
 			 * Fonts
